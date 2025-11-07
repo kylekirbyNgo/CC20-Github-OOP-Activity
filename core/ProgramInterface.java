@@ -1,3 +1,4 @@
+package core;
 // Defines what every program must have.
 // Think of this as a "contract" that all programs agree to follow.
 

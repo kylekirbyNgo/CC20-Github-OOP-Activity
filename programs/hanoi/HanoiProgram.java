@@ -1,7 +1,7 @@
-package programs.hanoi;
+package programs.hanoi; // <-- Correct and ONLY package declaration
 
-import java.util.Scanner;
-import ProgramInterface;
+import java.util.Scanner; // Required for Scanner
+import core.ProgramInterface; // Required for the interface
 
 // Solves Tower of Hanoi recursively.
 public class HanoiProgram implements ProgramInterface {

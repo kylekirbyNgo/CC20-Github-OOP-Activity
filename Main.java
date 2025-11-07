@@ -1,8 +1,6 @@
 import java.util.List;
 import java.util.Scanner;
-
-// Main entry point of the entire collection.
-// Students DO NOT modify this file.
+import core.ProgramInterface;
 
 public class Main {
     public static void main(String[] args) {

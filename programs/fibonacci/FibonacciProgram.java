@@ -1,7 +1,7 @@
-package programs.fibonacci;
+package programs.fibonacci; // <-- Correct and ONLY package declaration
 
-import java.util.Scanner;
-import ProgramInterface;
+import java.util.Scanner; // Required for Scanner
+import core.ProgramInterface; // Required for the interface
 
 // Simple example: prints Fibonacci sequence up to n terms.
 public class FibonacciProgram implements ProgramInterface {

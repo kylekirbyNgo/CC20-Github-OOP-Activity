@@ -1,7 +1,7 @@
-package programs.palindrome;
+package programs.palindrome; // <-- Correct and ONLY package declaration
 
-import java.util.Scanner;
-import ProgramInterface;
+import java.util.Scanner; // Required for Scanner
+import core.ProgramInterface; // Required for the interface
 
 // Checks if a word is a palindrome (reads same backward and forward).
 public class PalindromeProgram implements ProgramInterface {
