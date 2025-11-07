@@ -5,59 +5,59 @@ This guide will help you submit your own program while learning how to use Git a
 # 🧰 Prerequisites: Git and SSH Setup
 Before you clone the repository, make sure your Git and SSH are correctly configured.
 1. Verify Git Installation
-Check if Git is installed:
-```bash
-git --version
-```
-If not installed, download from: [git downloads](https://git-scm.com/downloads).
+    Check if Git is installed:
+    ```bash
+    git --version
+    ```
+    If not installed, download from: [git downloads](https://git-scm.com/downloads).
 
 2. Configure Your Git Identity
-Set your Git username and email — this will appear on your commits.
-```bash
-git config --global user.name "Your Full Name"
-git config --global user.email "your_email@example.com"
-```
-Confirm your settings:
-```bash
-git config --global --list
-```
+    Set your Git username and email — this will appear on your commits.
+    ```bash
+    git config --global user.name "Your Full Name"
+    git config --global user.email "your_email@example.com"
+    ```
+    Confirm your settings:
+    ```bash
+    git config --global --list
+    ```
 3. Set Up SSH Key for GitHub
     1. Generate a new SSH key:
-    ```bash
-    ssh-keygen -t ed25519 -C "your_email@example.com"ssh-keygen -t ed25519 -C "your_email@example.com"
-    ```
-    (If asked for a file location, just press Enter.)
+        ```bash
+        ssh-keygen -t ed25519 -C "your_email@example.com"ssh-keygen -t ed25519 -C "your_email@example.com"
+        ```
+        (If asked for a file location, just press Enter.)
     2. Start the SSH agent:
-    ```bash
-    eval "$(ssh-agent -s)"
-    ```
+        ```bash
+        eval "$(ssh-agent -s)"
+        ```
     3. Add your new SSH key:
-    ```bash
-    ssh-add ~/.ssh/id_ed25519
-    ```
+        ```bash
+        ssh-add ~/.ssh/id_ed25519
+        ```
     4. Display your public key:
-    ```bash
-    cat ~/.ssh/id_ed25519.pub
-    ```
+        ```bash
+        cat ~/.ssh/id_ed25519.pub
+        ```
     5. Copy the entire key and add it to your GitHub account:
         - Go to GitHub → Settings → SSH and GPG Keys → New SSH KeyGo to GitHub → Settings → SSH and GPG Keys → New SSH Key
         - Paste your key and save
     6. Test the connection:
-    ```bash
-    ssh -T git@github.com
-    ```
-    You should see: 
-    `"Hi <username>! You've successfully authenticated."`
+        ```bash
+        ssh -T git@github.com
+        ```
+        You should see: 
+        `"Hi <username>! You've successfully authenticated."`
 4. Clone Using SSH (Recommended)
-Once SSH is set up, clone the repository using your SSH link:
-```bash
-git clone git@github.com:<teacher-username>/program-collection.git
-cd program-collection
-```
-⚠️ If SSH doesn’t work, you can fall back to HTTPS:
-```bash
-git clone https://github.com/<teacher-username>/program-collection.git
-```
+    Once SSH is set up, clone the repository using your SSH link:
+    ```bash
+    git clone git@github.com:<teacher-username>/program-collection.git
+    cd program-collection
+    ```
+    ⚠️ If SSH doesn’t work, you can fall back to HTTPS:
+    ```bash
+    git clone https://github.com/<teacher-username>/program-collection.git
+    ```
 ---
 
 ## 🧱 1. Setup
