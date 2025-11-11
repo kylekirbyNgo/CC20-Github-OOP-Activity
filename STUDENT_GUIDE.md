@@ -62,17 +62,55 @@ Before you clone the repository, make sure your Git and SSH are correctly config
 
 ## 🧱 1. Setup
 
-### Clone the Repository
-```bash
-git clone https://github.com/<teacher-username>/program-collection.git
-cd program-collection
+### Fork the Repository
+⚠️ CRITICAL: Do this FIRST before cloning!
+1. Go to the instructor's repository:
+```text
+https://github.com/MichaelPagaran/CC20-Github-OOP-Activity
 ```
+2. Click the "Fork" button (top right corner, next to "Star")
+3. GitHub will ask "Where should we fork this repository?"
+    - Select YOUR account
+4. Wait for GitHub to create your fork (takes a few seconds)
+5. You'll be redirected to YOUR fork:
+    ```
+    https://github.com/YOUR-USERNAME/CC20-Github-OOP-Activity
+    ```
+    ✅ Success indicator: You should see "forked from MichaelPagaran/CC20-Github-OOP-Activity" under the repository name
+6. Clone YOUR Fork (Not the Instructor's!)
+    - Using SSH (Recommended):
+    ```bash
+        # Clone YOUR fork (replace YOUR-USERNAME!)
+        git clone git@github.com:YOUR-USERNAME/CC20-Github-OOP-Activity.git
 
-### Switch to the develop Branch
-```bash
-git checkout develop
-```
+        # Enter the directory
+        cd CC20-Github-OOP-Activity
+    ```
+    - Using HTTPS (If SSH doesn't work):
+    ``` bash
+    # Clone YOUR fork
+    git clone https://github.com/YOUR-USERNAME/CC20-Github-OOP-Activity.git
 
+    # Enter the directory
+    cd CC20-Github-OOP-Activity
+    ```
+    - Verify You Cloned YOUR Fork:
+    ```bash
+    # Check the remote URL
+    git remote -v
+    ```
+        - Expected output (SSH):
+        ```bash
+        origin  git@github.com:YOUR-USERNAME/CC20-Github-OOP-Activity.git (fetch)
+        origin  git@github.com:YOUR-USERNAME/CC20-Github-OOP-Activity.git (push)
+        ```
+        - Expected output (HTTPS):
+        ```bash
+        origin  https://github.com/YOUR-USERNAME/CC20-Github-OOP-Activity.git (fetch)
+        origin  https://github.com/YOUR-USERNAME/CC20-Github-OOP-Activity.git (push)
+        ```
+        ✅ CORRECT: You see YOUR username
+        ❌ WRONG: You see "MichaelPagaran" → You cloned the wrong repo!
 
 ## 🪪 2. Create an Issue on GitHub
 Open the repository in GitHub.
@@ -142,15 +180,30 @@ git push origin feature/<issue-number>-<short-title>
 5. Click Create pull request.
 
 ## 🔄 9. Sync with Latest Code
-If the teacher updates the repository, fetch and merge:
-```bash
-git fetch origin
-git checkout develop
-git pull
-git checkout feature/<your-branch>
-git merge develop
-``` 
+It is CRITICAL to regularly update your feature branch with the latest changes from develop to prevent complex merge conflicts later. Always follow these steps before you start a new work session or before creating your Pull Request.
+1. Switch to the `develop` branch: This is your clean sync point.
+    ``` bash
+    git checkout develop
+    ```
+2. Fetch the latest changes from your remote fork: (This ensures origin/develop is current).
+    ```bash
+    git fetch origin
+    ```
+3. Update your local develop: Merge the remote origin/develop into your local develop.
+    ```bash
+    git merge origin/develop
+    ```
+4. Switch back to your feature branch:
+    ```bash
+    git checkout feature/<your-branch-name>
+    ```
+5. Merge the updated develop into your feature branch: This brings the latest code into your work.
+    ```bash
+    git merge develop
+    ```
+    If there are conflicts, you must resolve them now before proceeding.
 
 ## ✅ 10. After Approval
 Once your PR is merged — congratulations! 🎉
 Your work becomes part of the official collection.
+
