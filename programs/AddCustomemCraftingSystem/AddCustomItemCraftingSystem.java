@@ -5,6 +5,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner; // ✅ Make sure this exists!
 
+ /**
+  * Add Custom Item Crafting System
+  * An interactive crafting system featuring legendary weapons,potions,and artifacts.
+  *
+  *Author : Kyle Kirby M. Ngo
+  *
+  */
+
+
 public class AddCustomItemCraftingSystem implements ProgramInterface {
 
     public String getName() { 
